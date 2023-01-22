@@ -6,7 +6,7 @@ body {
 
 label {
   width: 60px;
-  border-right: 1px solid black;
+  border-right: 1px solid white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,28 +17,37 @@ label {
 textarea {
   width: 95%;
   height: 60%;
-
-  /* margin-top: -10px; */
-  /* margin-left:30px; */
   background: transparent;
   border: none;
   outline: none;
   resize: none;
 }
 
-/* label {
-  display:flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 30px;
-} */
-
 .jumbotron {
   text-align: center;
-  background-color: transparent;
-  color: black;
+  background-image: linear-gradient(
+    180deg,
+    hsl(0deg 0% 93%) 0%,
+    hsl(0deg 0% 91%) 6%,
+    hsl(0deg 0% 89%) 12%,
+    hsl(0deg 0% 88%) 18%,
+    hsl(0deg 0% 86%) 24%,
+    hsl(0deg 0% 84%) 31%,
+    hsl(0deg 0% 82%) 37%,
+    hsl(0deg 0% 81%) 43%,
+    hsl(0deg 0% 79%) 49%,
+    hsl(0deg 0% 77%) 55%,
+    hsl(0deg 0% 75%) 60%,
+    hsl(0deg 0% 73%) 66%,
+    hsl(0deg 0% 71%) 72%,
+    hsl(0deg 0% 69%) 78%,
+    hsl(0deg 0% 66%) 83%,
+    hsl(0deg 0% 64%) 89%,
+    hsl(0deg 0% 62%) 94%,
+    hsl(0deg 0% 59%) 100%
+  );  color: black;
   border-radius: 0;
-  border-bottom: 10px solid black;
+  border-bottom: 2px solid black;
 }
 
 .description {
@@ -63,24 +72,83 @@ textarea {
 }
 
 .past {
-  background-color: #d3d3d3;
-  color: white;
+  background-image: linear-gradient(
+    90deg,
+    hsl(0deg 0% 83%) 0%,
+    hsl(0deg 0% 81%) 7%,
+    hsl(0deg 0% 79%) 14%,
+    hsl(0deg 0% 77%) 21%,
+    hsl(0deg 0% 75%) 27%,
+    hsl(0deg 0% 73%) 33%,
+    hsl(0deg 0% 71%) 40%,
+    hsl(0deg 0% 68%) 46%,
+    hsl(0deg 0% 66%) 51%,
+    hsl(0deg 0% 64%) 57%,
+    hsl(0deg 0% 61%) 62%,
+    hsl(0deg 0% 58%) 68%,
+    hsl(0deg 0% 56%) 73%,
+    hsl(0deg 0% 53%) 78%,
+    hsl(0deg 0% 50%) 84%,
+    hsl(0deg 0% 47%) 89%,
+    hsl(0deg 0% 43%) 95%,
+    hsl(0deg 0% 39%) 100%
+  );  color: white;
 }
 
 .present {
-  background-color: #ff6961;
+  background-image: linear-gradient(
+  90deg,
+  hsl(3deg 100% 69%) 0%,
+  hsl(3deg 96% 68%) 7%,
+  hsl(3deg 92% 67%) 14%,
+  hsl(3deg 89% 65%) 21%,
+  hsl(3deg 86% 64%) 27%,
+  hsl(3deg 83% 63%) 33%,
+  hsl(3deg 80% 61%) 40%,
+  hsl(2deg 77% 60%) 46%,
+  hsl(2deg 74% 59%) 51%,
+  hsl(2deg 72% 57%) 57%,
+  hsl(2deg 70% 55%) 62%,
+  hsl(2deg 68% 54%) 68%,
+  hsl(2deg 66% 52%) 73%,
+  hsl(2deg 64% 50%) 78%,
+  hsl(2deg 67% 48%) 84%,
+  hsl(1deg 72% 46%) 89%,
+  hsl(1deg 79% 43%) 95%,
+  hsl(3deg 100% 38%) 100%
+);
   color: white;
 }
 
 .future {
-  background-color: #77dd77;
+  background-image: linear-gradient(
+  90deg,
+  hsl(120deg 60% 67%) 0%,
+  hsl(120deg 59% 66%) 7%,
+  hsl(120deg 59% 65%) 14%,
+  hsl(120deg 58% 64%) 21%,
+  hsl(120deg 58% 63%) 27%,
+  hsl(120deg 57% 62%) 33%,
+  hsl(120deg 57% 60%) 40%,
+  hsl(120deg 57% 59%) 46%,
+  hsl(120deg 56% 58%) 51%,
+  hsl(120deg 56% 57%) 57%,
+  hsl(120deg 56% 55%) 62%,
+  hsl(120deg 56% 54%) 68%,
+  hsl(120deg 56% 53%) 73%,
+  hsl(120deg 56% 51%) 78%,
+  hsl(120deg 58% 49%) 84%,
+  hsl(120deg 63% 47%) 89%,
+  hsl(120deg 70% 45%) 95%,
+  hsl(120deg 81% 42%) 100%
+);;
   color: white;
 }
 
 .saveBtn {
   border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
+  /* border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px; */
   background-color: #06aed5;
   color: white;
   height: 80px;

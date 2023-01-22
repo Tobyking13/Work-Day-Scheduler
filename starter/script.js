@@ -29,6 +29,7 @@ setInterval(getTime, 60000);
 
 function timeColorCode() {
   var hour = moment().format("HH");
+  hour = '12'
   var totalHours = $(".container").children().length;
 
   for (var i = 0; i < totalHours; i++) {
