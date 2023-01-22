@@ -1,6 +1,5 @@
 getSchedule();
 
-// var day = JSON.parse(localStorage.getItem('hour9'))
 var day = {
   hour9: JSON.parse(localStorage.getItem("hour9")),
   hour10: JSON.parse(localStorage.getItem("hour10")),
@@ -12,8 +11,6 @@ var day = {
   hour16: JSON.parse(localStorage.getItem("hour16")),
   hour17: JSON.parse(localStorage.getItem("hour17")),
 };
-
-//day = JSON.parse(localStorage.getItem('hour'));
 
 function getTime() {
   var time = $("#currentDay");
@@ -77,66 +74,56 @@ function getSchedule() {
   });
 }
 
+
+
 function setSchedule() {
-  //for (var i = 9; i < 18; i++) {
   $("document").ready(function () {
     $("#btn9").click(function (e) {
       let hour9Text = $("#text9").val().trim();
-
       localStorage.setItem("hour9", JSON.stringify(hour9Text));
     });
     $("#btn10").click(function () {
       let hour10Text = $("#text10").val().trim();
-
       localStorage.setItem("hour10", JSON.stringify(hour10Text));
     });
     $("#btn11").click(function () {
       let hour11Text = $("#text11").val().trim();
-
       localStorage.setItem("hour11", JSON.stringify(hour11Text));
     });
     $("#btn12").click(function () {
       let hour12Text = $("#text12").val().trim();
-
       localStorage.setItem("hour12", JSON.stringify(hour12Text));
     });
     $("#btn13").click(function () {
       let hour13Text = $("#text13").val().trim();
-
       localStorage.setItem("hour13", JSON.stringify(hour13Text));
     });
     $("#btn14").click(function () {
       let hour14Text = $("#text14").val().trim();
-
       localStorage.setItem("hour14", JSON.stringify(hour14Text));
     });
     $("#btn15").click(function () {
       let hour15Text = $("#text15").val().trim();
-
       localStorage.setItem("hour15", JSON.stringify(hour15Text));
     });
     $("#btn16").click(function () {
       let hour16Text = $("#text16").val().trim();
-
       localStorage.setItem("hour16", JSON.stringify(hour16Text));
     });
     $("#btn17").click(function () {
       let hour17Text = $("#text17").val().trim();
-
       localStorage.setItem("hour17", JSON.stringify(hour17Text));
     });
   });
 }
 
-//console.log(day)
-
-//}
-
 getTime();
 timeColorCode();
 setSchedule();
-// get value from input text
-// store value into local storage
-// get value from local storage and set input value to it
 
-// make a function to check current time and set the text boxes to red for current time, grey for past and green for future. I can use CSS to change this.
+
+// Too much repetative code. Look for ways to simplify things
+// style the page so it looks good.
+
+// add a button to clear the hour
+// when user hits enter textarea saves
