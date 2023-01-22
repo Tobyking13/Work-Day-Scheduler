@@ -29,10 +29,9 @@ setInterval(getTime, 60000);
 
 function timeColorCode() {
   var hour = moment().format("HH");
-  hour = '12'
   var totalHours = $(".container").children().length;
 
-  for (var i = 0; i < totalHours; i++) {
+  for (let i = 0; i < totalHours; i++) {
     var rowHour = $(".container").children().eq(i).attr("id");
 
     if (hour === rowHour) {
@@ -50,7 +49,7 @@ function timeColorCode() {
 }
 
 function getSchedule() {
-  for (var i = 9; i <= 17; i++) {
+  for (let i = 9; i <= 17; i++) {
       var text = $('#text' + (i))
       var hour = day['hour' + i]
       text.val(hour)
@@ -69,6 +68,17 @@ function setSchedule() {
   }
 }
 
+function clearSchedule() {
+  for (let i = 9; i <= 17; i++) {
+    $('#btnCl' + i).click(function() {
+      localStorage.removeItem('hour' + i);
+      localStorageToObj();
+      setSchedule();
+      getSchedule();
+    })
+  }
+}
+
 getTime();
 timeColorCode();
 
@@ -76,11 +86,11 @@ $(document).ready(function(){
   localStorageToObj();
   setSchedule();
   getSchedule();
+  clearSchedule();
 });
 
 // Too much repetative code. Look for ways to simplify things
 
-// add a button to clear the hour
 // when user hits enter textarea saves
 
 // dropdown menu to change timezone
