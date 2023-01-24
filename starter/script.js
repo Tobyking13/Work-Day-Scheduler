@@ -10,22 +10,33 @@ var day = {
   hour17: ''
 };
 
+// add time to title
+
 function localStorageToObj() {
   for (var i = 9; i <= 17; i++) {
-    day['hour' + i] = JSON.parse(localStorage.getItem('hour' + i));
+    day['hour' + i] = JSON.parse(localStorage.getItem("hour" + i));
   }
 }
 
-function getTime() {
-  var time = $("#currentDay");
+function getDate() {
+  var day = $("#currentDay");
   var date = moment().format("dddd, Do MMMM YYYY");
   var empty = "";
+  day.text(empty);
+  day.append(date);
+}
+
+function getTime() {
+  var time = $("#currentTime");
+  var currentTime = moment().format('h:mm A');
+  var empty = "";
   time.text(empty);
-  time.append(date);
+  time.append(currentTime)
 }
 
 setInterval(timeColorCode, 60000);
-setInterval(getTime, 60000);
+setInterval(getDate, 60000);
+setInterval(getTime, 1000);
 
 function timeColorCode() {
   var hour = moment().format("HH");
@@ -50,16 +61,16 @@ function timeColorCode() {
 
 function getSchedule() {
   for (let i = 9; i <= 17; i++) {
-      var text = $('#text' + (i))
-      var hour = day['hour' + i]
-      text.val(hour)
+      var text = $('#text' + (i));
+      var hour = day['hour' + i];
+      text.val(hour);
   }
 }
 
 function setSchedule() {
   for (let i = 9; i <= 17; i++) {
-    $('#btn' + i).click(function(e) {
-      var textArea = $('#text' + i);
+    $("#btn" + i).click(function(e) {
+      var textArea = $("#text" + i);
       var textareaValue = JSON.parse(localStorage.getItem("hour" + i));
       textareaValue = textArea.val();
       day["hour" + i] = textareaValue;
@@ -70,15 +81,15 @@ function setSchedule() {
 
 function clearSchedule() {
   for (let i = 9; i <= 17; i++) {
-    $('#btnCl' + i).click(function() {
-      localStorage.removeItem('hour' + i);
+    $("#btnCl" + i).click(function() {
+      localStorage.removeItem("hour" + i);
       localStorageToObj();
-      setSchedule();
       getSchedule();
     })
   }
 }
 
+getDate();
 getTime();
 timeColorCode();
 
